@@ -7,6 +7,25 @@
     <title>构造函数与new命令</title>
 </head>
 <body>
-    
+    <script>
+        /***
+         * 构造函数两个特点:
+         * 1.函数体内部使用了this关键字，代表了所要生成的对象实例。
+         * 2.生成对象的时候，必须使用new命令。
+         * **/
+        function Vehicle(){
+            this.price = 100000;
+        }
+        /***
+         * new命令的作用，就是执行构造函数，返回一个实例对象。
+         * new命令本身就可以执行构造函数，所以后面的构造函数可以不带括号。但是为了区分是函数调用，推荐带括号。
+         * 
+         * new命令原理:
+         * 创建一个空对象，作为将要返回的对象实例
+         * 将这个空对象的原型，指向构造函数的prototype属性
+         * **/
+        var v = new Vehicle();
+        var v = new Vehicle;
+    </script>
 </body>
 </html>
